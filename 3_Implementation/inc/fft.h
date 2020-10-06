@@ -15,7 +15,6 @@
 * @return FFT of the input data sequence
 *
 */
-
 float * fft(int, float []);
 
 #endif /* FFT_H_INCLUDED */

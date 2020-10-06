@@ -1,4 +1,7 @@
-///@file main.c
+/**
+* @file main.c
+*
+*/
 
 #include "fft.h"
 
@@ -25,6 +28,7 @@ int main(){
             break;
         }
     }
+
     //accept input data sequence
     float data[2*N];
     printf("\n\tEnter input data sequence\t(Make sure the real and imaginary part are separated by a white space):\n\n");

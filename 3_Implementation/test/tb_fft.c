@@ -1,13 +1,21 @@
+/**
+* @file tb_fft.c
+*
+*/
+
 #include "unity.h"
 #include "fft.h"
 
+/** Required by the unity test framework */
 void setUp(){}
 
+/** Required by the unity test framework */
 void tearDown(){}
 
 int length;
 float * ditfft;
 
+/** Test whether the FFT is computed for arbitrary length of data */
 void test_fft_arbitrary_length(void){
 
     length = 2;
@@ -32,6 +40,7 @@ void test_fft_arbitrary_length(void){
 
 }
 
+/** Test whether the FFT is computed for real data */
 void test_fft_real(void){
 
     length = 4;
@@ -46,6 +55,7 @@ void test_fft_real(void){
 
 }
 
+/** Test whether the FFT is computed for complex data */
 void test_fft_complex(void){
 
     length = 4;
@@ -60,6 +70,7 @@ void test_fft_complex(void){
 
 }
 
+/** Test whether the FFT is computed for even data */
 void test_fft_even_symmetry(void){
 
     length = 4;
@@ -74,6 +85,7 @@ void test_fft_even_symmetry(void){
 
 }
 
+/** Test whether the FFT is computed for odd data */
 void test_fft_odd_symmetry(void){
 
     length = 4;
@@ -88,8 +100,10 @@ void test_fft_odd_symmetry(void){
 
 }
 
+/** Start of test */
 int main(void){
 
+    /** Initiate the Unity Test Framework */
     UNITY_BEGIN();
 
     RUN_TEST(test_fft_arbitrary_length);
@@ -98,7 +112,8 @@ int main(void){
     RUN_TEST(test_fft_even_symmetry);
     RUN_TEST(test_fft_odd_symmetry);
 
-  return UNITY_END();
+    /** Close the Unity Test Framework */
+    return UNITY_END();
 
 }
 
