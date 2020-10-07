@@ -1,4 +1,7 @@
 # Behavior Diagrams
 
-## Add all the Behavior diagrams implememted
+## Activity Diagram
+
+![Activity Diagram](..\..\7_Other\Activity Diagram.png)
+
 
