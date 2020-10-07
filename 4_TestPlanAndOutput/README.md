@@ -44,8 +44,8 @@ If 40% of test cases failed, testing is suspended until the previous cases are f
 
 ### Exit Criteria
 
-Run rate - 100%
-Pass rate - greater than or equal to 90%.
+* Run rate - 100%
+* Pass rate - greater than or equal to 90%.
 
 
 ## 4. Test Environment
