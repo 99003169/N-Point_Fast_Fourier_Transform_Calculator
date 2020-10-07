@@ -21,7 +21,7 @@ $(PROJECT_NAME):all
 .PHONY: all test doc run clean
 
 all: $(SRC) $(BUILD)
-	gcc -lm $(SRC) $(INC) -o $(PROJECT_OUTPUT)
+	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT) -lm
 
 run:$(PROJECT_NAME)
 	./$(PROJECT_OUTPUT)
