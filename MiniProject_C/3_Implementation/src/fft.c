@@ -1,4 +1,4 @@
-#include "fft.h"
+#include <fft.h>
 
 #define SWAP(a,b) tempr=(a); (a)=(b); (b)=tempr
 
