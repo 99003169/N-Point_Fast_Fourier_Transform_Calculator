@@ -51,3 +51,22 @@ Pass rate - greater than or equal to 90%.
 ## 4. Test Environment
 
 The test is carried out using Unity – A unit test framework.
+
+
+## 5. Test Cases
+
+| Test Case ID 	  | Test Scenario	                                                        | Test Steps	                                    | Test Data
+|-----------------|-----------------------------------------------------------------------|-------------------------------------------------|------------------------------------
+| TC01	          | Test whether the FFT is computed for arbitrary length of inputs.	    | 1.Enter the no. of samples.                     | 1. 8
+|                 |                                                                       |  2. Enter the samples.                          | 2. 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0
+|                 |                                                                       | 1. Enter a different no. of samples.	          | 1. 2
+|                 |                                                                       | 2. Enter the samples again.                     | 2. 1, 1
+| TC02	          | Test whether the FFT is computed for real numbers.	                  | 1. Enter the no. of samples.                    | 1. 4
+|                 |                                                                       | 2. Enter real samples.	                        | 2. 1, -1, 1, -1
+| TC03	          | Test whether the FFT is computed for complex numbers.	                | 1. Enter the no. of samples.                    | 1. 4
+|                 |                                                                       | 2. Enter complex samples.	                      | 2. j, 0, -j, 0
+| TC04	          | Test whether the FFT is computed for data samples with even symmetry.	| 1. Enter the no. of samples.                    | 1. 4
+|                 |                                                                       | 2. Enter even data samples.                     | 2. -1+1j, 0, 1+j, 0
+| TC05	          | Test whether the FFT is computed for data samples with odd symmetry.	| 1. Enter the no. of samples.                    | 1. 4
+|                 |                                                                       | 2. Enter odd data samples.                      | 2. -1-1j, 0, 1+j, 0
+
