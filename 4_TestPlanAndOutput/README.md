@@ -4,7 +4,7 @@
 ## 1. Test Strategy
 
 
-### 1.1 Test Scope
+### Test Scope
 
 
 #### Features to be Tested
@@ -24,7 +24,7 @@
 | FW05	                               | Inputs shall be valid.
 
 
-### 1.2 Test Type
+### Test Type
 
 * Unit Testing: To test the smallest piece of verifiable software in the application.
 * System Test: Conducted on a complete, integrated system to evaluate the systems compliance with its specified requirements.
@@ -38,11 +38,11 @@ The objective of the test is to find as many software defects as possible, thus 
 
 ## 3. Test Criteria
 
-### 3.1 Suspension Criteria
+### Suspension Criteria
 
 If 40% of test cases failed, testing is suspended until the previous cases are fixed.
 
-### 3.2 Exit Criteria
+### Exit Criteria
 
 Run rate - 100%
 Pass rate - greater than or equal to 90%.
