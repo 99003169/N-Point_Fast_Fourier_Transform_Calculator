@@ -1,5 +1,4 @@
 #include "fft.h"
-#include <math.h>
 
 #define SWAP(a,b) tempr=(a); (a)=(b); (b)=tempr
 
@@ -30,7 +29,7 @@ float * fft(int N, float data[]){
     while (n > mmax) {
         istep = mmax << 1;
         theta = isign*(6.28318530717959/mmax);
-        wtemp = sin(0.5*theta);
+        wtemp = sin (0.5*theta);
         wpr = -2.0*wtemp*wtemp;
         wpi = sin(theta);
         wr = 1.0;
