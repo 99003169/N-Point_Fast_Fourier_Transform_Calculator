@@ -31,7 +31,7 @@ int main(){
 
     //accept input data sequence
     float data[2*N];
-    printf("\n\tEnter input data sequence\t(Make sure the real and imaginary part are separated by a white space):\n\n");
+    printf("\n\tEnter input data sequence\t(Make sure the real and imaginary part are separated by 2 tabs):\n\n");
     printf("\t\tINPUT\n");
     printf("\n\tReal Part\tImaginary Part\n\n");
     for (k = 0; k < 2*N; k += 2){

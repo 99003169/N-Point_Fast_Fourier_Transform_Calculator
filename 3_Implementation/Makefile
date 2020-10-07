@@ -18,7 +18,11 @@ TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
 DOCUMENTATION_OUTPUT = documentation/html
 
-$(PROJECT_NAME): $(SRC) $(BUILD)
+$(PROJECT_NAME):all
+
+.PHONY: all test doc run clean
+
+all: $(SRC) $(BUILD)
 	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT)
 
 run:$(PROJECT_NAME)
