@@ -40,7 +40,7 @@ The objective of the test is to find as many software defects as possible, thus 
 
 ### Suspension Criteria
 
-If 40% of test cases failed, testing is suspended until the previous cases are fixed.
+* If 40% of test cases failed, testing is suspended until the previous cases are fixed.
 
 ### Exit Criteria
 
