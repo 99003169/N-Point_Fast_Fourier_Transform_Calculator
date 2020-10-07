@@ -6,11 +6,9 @@ SRC = src/fft.c\
 main.c\
 
 TEST_SRC = src/fft.c\
-test/tb_fft.c\
-unity/unity.c\
+test/test_fft.c\
 
 INC = -Iinc\
--Iunity\
 
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
 
@@ -29,7 +27,7 @@ run:$(PROJECT_NAME)
 	./$(PROJECT_OUTPUT)
 
 test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
+	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) -lcunit
 	./$(TEST_OUTPUT)
 
 doc:
