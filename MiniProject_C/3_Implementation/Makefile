@@ -27,7 +27,7 @@ run:$(PROJECT_NAME)
 	./$(PROJECT_OUTPUT)
 
 test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) -lcunit
+	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) -lcunit -lm
 	./$(TEST_OUTPUT)
 
 doc:
