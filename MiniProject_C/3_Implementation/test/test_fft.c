@@ -26,14 +26,14 @@ int main() {
 	CU_add_test(suite, "fft_odd_symmetry", test_fft_odd_symmetry);
 
   	CU_basic_set_mode(CU_BRM_VERBOSE);
-  
+
 	CU_basic_run_tests();
-  
+
 	CU_cleanup_registry();
 
   	return 0;
 }
- 
+
 void test_fft_arbitrary_length(void) {
 	length = 2;
     	float input1[] = {1,0,1,0};
@@ -65,7 +65,7 @@ void test_fft_real(void) {
         	output[i] = ditfft[i];
     	}
     	float expectedoutput[] = {0.000000,0.000000,0.000000,0.000000,4.000000,0.000000,0.000000,0.000000};
-    	CU_ASSERT_EQUAL_FLOAT_ARRAY(expectedoutput, output);
+    	CU_ASSERT_EQUAL(expectedoutput, output);
 }
 
 void test_fft_complex(void) {
@@ -77,7 +77,7 @@ void test_fft_complex(void) {
         	output[i] = ditfft[i];
     	}
     	float expectedoutput[] = {0.000000,0.000000,0.000000,2.000000,0.000000,0.000000,0.000000,2.000000};
-    	CU_ASSERT_EQUAL_FLOAT_ARRAY(expectedoutput, output);
+    	CU_ASSERT_EQUAL(expectedoutput, output);
 }
 
 void test_fft_even_symmetry(void) {
@@ -89,7 +89,7 @@ void test_fft_even_symmetry(void) {
         	output[i] = ditfft[i];
     	}
     	float expectedoutput[] = {0.000000,2.000000,-2.000000,0.000000,0.000000,2.000000,-2.000000,0.000000};
-    	CU_ASSERT_EQUAL_FLOAT_ARRAY(expectedoutput, output);
+    	CU_ASSERT_EQUAL(expectedoutput, output);
 }
 
 void test_fft_odd_symmetry(void) {
@@ -101,5 +101,5 @@ void test_fft_odd_symmetry(void) {
         	output[i] = ditfft[i];
     	}
     	float expectedoutput[] = {0.000000,0.000000,-2.000000,-2.000000,0.000000,0.000000,-2.000000,-2.000000};
-    	CU_ASSERT_EQUAL_FLOAT_ARRAY(expectedoutput, output);
+    	CU_ASSERT_EQUAL(expectedoutput, output);
 }
