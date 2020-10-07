@@ -3,7 +3,7 @@
 *
 */
 
-#include "fft.h"
+#include <fft.h>
 
 /**
 *Main entry of the program
