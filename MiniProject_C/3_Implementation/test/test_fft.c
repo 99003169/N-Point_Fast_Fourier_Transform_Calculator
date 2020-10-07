@@ -35,71 +35,97 @@ int main() {
 }
 
 void test_fft_arbitrary_length(void) {
-	length = 2;
-    	float input1[] = {1,0,1,0};
-    	ditfft = fft(length, input1);
-    	float output1[2*length];
-    	for (int i = 0; i < 2*length; i++){
-        	output1[i] = ditfft[i];
-    	}
-    	float expectedoutput1[] = {2,0,0,0};
-    	CU_ASSERT_EQUAL(expectedoutput1, output1, 2*length);
 
-    	length = 8;
-    	float input2[] = {0.5,0,0.5,0,0.5,0,0.5,0,0,0,0,0,0,0,0,0};
-    	ditfft = fft(length, input2);
-    	float output2[2*length];
-    	for (int i = 0; i < 2*length; i++){
-        	output2[i] = ditfft[i];
-    	}
-    	float expectedoutput2[] = {2,0.000000,0.5,-1.207107,0,0.000000,0.5,-0.207107,0,0.000000,0.5,0.207107,0,0.000000,0.5,1.207107};
-    	CU_ASSERT_EQUAL(expectedoutput2, output2);
+    length = 2;
+    float input1[] = {1,0,1,0};
+    ditfft = fft(length, input1);
+    CU_ASSERT_EQUAL(2, ditfft[0]);
+    CU_ASSERT_EQUAL(0, ditfft[1]);
+    CU_ASSERT_EQUAL(0, ditfft[2]);
+    CU_ASSERT_EQUAL(0, ditfft[3]);
+
+    length = 8;
+    float input2[] = {0.5,0,0.5,0,0.5,0,0.5,0,0,0,0,0,0,0,0,0};
+    ditfft = fft(length, input2);
+    CU_ASSERT_EQUAL(2, ditfft[0]);
+    CU_ASSERT_EQUAL(0, ditfft[1]);
+    CU_ASSERT_EQUAL(0.5, ditfft[2]);
+    CU_ASSERT_EQUAL(-1.207107, ditfft[3]);
+    CU_ASSERT_EQUAL(0, ditfft[4]);
+    CU_ASSERT_EQUAL(0, ditfft[5]);
+    CU_ASSERT_EQUAL(0.5, ditfft[6]);
+    CU_ASSERT_EQUAL(-0.207107, ditfft[7]);
+    CU_ASSERT_EQUAL(0, ditfft[8]);
+    CU_ASSERT_EQUAL(0, ditfft[9]);
+    CU_ASSERT_EQUAL(0.5, ditfft[10]);
+    CU_ASSERT_EQUAL(0.207107, ditfft[11]);
+    CU_ASSERT_EQUAL(0, ditfft[12]);
+    CU_ASSERT_EQUAL(0, ditfft[13]);
+    CU_ASSERT_EQUAL(0.5, ditfft[14]);
+    CU_ASSERT_EQUAL(1.207107, ditfft[15]);
+
 }
 
 void test_fft_real(void) {
-	length = 4;
-    	float input[] = {1,0,-1,0,1,0,-1,0};
-    	ditfft = fft(length, input);
-    	float output[2*length];
-    	for (int i = 0; i < 2*length; i++){
-        	output[i] = ditfft[i];
-    	}
-    	float expectedoutput[] = {0.000000,0.000000,0.000000,0.000000,4.000000,0.000000,0.000000,0.000000};
-    	CU_ASSERT_EQUAL(expectedoutput, output);
+
+    length = 4;
+    float input[] = {1,0,-1,0,1,0,-1,0};
+    ditfft = fft(length, input);
+    CU_ASSERT_EQUAL(0, ditfft[0]);
+    CU_ASSERT_EQUAL(0, ditfft[1]);
+    CU_ASSERT_EQUAL(0, ditfft[2]);
+    CU_ASSERT_EQUAL(0, ditfft[3]);
+    CU_ASSERT_EQUAL(4, ditfft[4]);
+    CU_ASSERT_EQUAL(0, ditfft[5]);
+    CU_ASSERT_EQUAL(0, ditfft[6]);
+    CU_ASSERT_EQUAL(0, ditfft[7]);
+
 }
 
 void test_fft_complex(void) {
+
 	length = 4;
 	float input[] = {0,1,0,0,0,-1,0,0};
-    	ditfft = fft(length, input);
-    	float output[2*length];
-    	for (int i = 0; i < 2*length; i++){
-        	output[i] = ditfft[i];
-    	}
-    	float expectedoutput[] = {0.000000,0.000000,0.000000,2.000000,0.000000,0.000000,0.000000,2.000000};
-    	CU_ASSERT_EQUAL(expectedoutput, output);
+    ditfft = fft(length, input);
+    CU_ASSERT_EQUAL(0, ditfft[0]);
+    CU_ASSERT_EQUAL(0, ditfft[1]);
+    CU_ASSERT_EQUAL(0, ditfft[2]);
+    CU_ASSERT_EQUAL(2, ditfft[3]);
+    CU_ASSERT_EQUAL(0, ditfft[4]);
+    CU_ASSERT_EQUAL(0, ditfft[5]);
+    CU_ASSERT_EQUAL(0, ditfft[6]);
+    CU_ASSERT_EQUAL(2, ditfft[7]);
+
 }
 
 void test_fft_even_symmetry(void) {
+
   	length = 4;
-    	float input[] = {-1,1,0,0,1,1,0,0};
-    	ditfft = fft(length, input);
-    	float output[2*length];
-    	for (int i = 0; i < 2*length; i++){
-        	output[i] = ditfft[i];
-    	}
-    	float expectedoutput[] = {0.000000,2.000000,-2.000000,0.000000,0.000000,2.000000,-2.000000,0.000000};
-    	CU_ASSERT_EQUAL(expectedoutput, output);
+    float input[] = {-1,1,0,0,1,1,0,0};
+    ditfft = fft(length, input);
+    CU_ASSERT_EQUAL(0, ditfft[0]);
+    CU_ASSERT_EQUAL(2, ditfft[1]);
+    CU_ASSERT_EQUAL(-2, ditfft[2]);
+    CU_ASSERT_EQUAL(0, ditfft[3]);
+    CU_ASSERT_EQUAL(0, ditfft[4]);
+    CU_ASSERT_EQUAL(2, ditfft[5]);
+    CU_ASSERT_EQUAL(-2, ditfft[6]);
+    CU_ASSERT_EQUAL(0, ditfft[7]);
+
 }
 
 void test_fft_odd_symmetry(void) {
   	length = 4;
-    	float input[] = {-1,-1,0,0,1,1,0,0};
-    	ditfft = fft(length, input);
-    	float output[2*length];
-    	for (int i = 0; i < 2*length; i++){
-        	output[i] = ditfft[i];
-    	}
+    float input[] = {-1,-1,0,0,1,1,0,0};
+    ditfft = fft(length, input);
     	float expectedoutput[] = {0.000000,0.000000,-2.000000,-2.000000,0.000000,0.000000,-2.000000,-2.000000};
-    	CU_ASSERT_EQUAL(expectedoutput, output);
+    CU_ASSERT_EQUAL(0, ditfft[0]);
+    CU_ASSERT_EQUAL(0, ditfft[1]);
+    CU_ASSERT_EQUAL(-2, ditfft[2]);
+    CU_ASSERT_EQUAL(-2, ditfft[3]);
+    CU_ASSERT_EQUAL(0, ditfft[4]);
+    CU_ASSERT_EQUAL(0, ditfft[5]);
+    CU_ASSERT_EQUAL(-2, ditfft[6]);
+    CU_ASSERT_EQUAL(-2, ditfft[7]);
+
 }
