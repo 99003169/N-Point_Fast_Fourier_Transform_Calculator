@@ -118,7 +118,6 @@ void test_fft_odd_symmetry(void) {
   	length = 4;
     float input[] = {-1,-1,0,0,1,1,0,0};
     ditfft = fft(length, input);
-    	float expectedoutput[] = {0.000000,0.000000,-2.000000,-2.000000,0.000000,0.000000,-2.000000,-2.000000};
     CU_ASSERT_EQUAL(0, ditfft[0]);
     CU_ASSERT_EQUAL(0, ditfft[1]);
     CU_ASSERT_EQUAL(-2, ditfft[2]);
