@@ -42,24 +42,24 @@ void test_fft_arbitrary_length(void) {
     CU_ASSERT_EQUAL(0, ditfft[2]);
     CU_ASSERT_EQUAL(0, ditfft[3]);
 
-    float input2[] = {0.5,0,0.5,0,0.5,0,0.5,0,0,0,0,0,0,0,0,0};
+    float input2[] = {1,0,1,0,1,0,1,0,0,0,0,0,0,0,0,0};
     ditfft = fft(8, input2);
     CU_ASSERT_EQUAL(2, ditfft[0]);
     CU_ASSERT_EQUAL(0, ditfft[1]);
-    CU_ASSERT_FLOAT_EQUAL(0.500000, ditfft[2]);
-    CU_ASSERT_FLOAT_EQUAL(-1.207107, ditfft[3]);
+    CU_ASSERT_DOUBLE_EQUAL(0.500000, ditfft[2]);
+    CU_ASSERT_EQUAL(-1.207107, ditfft[3]);
     CU_ASSERT_EQUAL(0, ditfft[4]);
     CU_ASSERT_EQUAL(0, ditfft[5]);
-    CU_ASSERT_FLOAT_EQUAL(0.500000, ditfft[6]);
-    CU_ASSERT_FLOAT_EQUAL(-0.207107, ditfft[7]);
+    CU_ASSERT_EQUAL(0.500000, ditfft[6]);
+    CU_ASSERT_EQUAL(-0.207107, ditfft[7]);
     CU_ASSERT_EQUAL(0, ditfft[8]);
     CU_ASSERT_EQUAL(0, ditfft[9]);
-    CU_ASSERT_FLOAT_EQUAL(0.500000, ditfft[10]);
-    CU_ASSERT_FLOAT_EQUAL(0.207107, ditfft[11]);
+    CU_ASSERT_EQUAL(0.500000, ditfft[10]);
+    CU_ASSERT_EQUAL(0.207107, ditfft[11]);
     CU_ASSERT_EQUAL(0, ditfft[12]);
     CU_ASSERT_EQUAL(0, ditfft[13]);
-    CU_ASSERT_FLOAT_EQUAL(0.500000, ditfft[14]);
-    CU_ASSERT_FLOAT_EQUAL(1.207107, ditfft[15]);
+    CU_ASSERT_EQUAL(0.500000, ditfft[14]);
+    CU_ASSERT_EQUAL(1.207107, ditfft[15]);
 
 }
 
