@@ -35,31 +35,31 @@ int main() {
 
 void test_fft_arbitrary_length(void) {
 
-    float input1[] = {1,0,1,0};
-    ditfft = fft(2, input1);
-    CU_ASSERT_EQUAL(2, ditfft[0]);
-    CU_ASSERT_EQUAL(0, ditfft[1]);
-    CU_ASSERT_EQUAL(0, ditfft[2]);
-    CU_ASSERT_EQUAL(0, ditfft[3]);
-
     float input2[] = {0,0,0,1,0,0,1,0,0,0,0,1,0,0,1,0};
     ditfft = fft(8, input2);
     CU_ASSERT_EQUAL(2, ditfft[0]);
     CU_ASSERT_EQUAL(2, ditfft[1]);
     CU_ASSERT_EQUAL(0, ditfft[2]);
     CU_ASSERT_EQUAL(0, ditfft[3]);
-    CU_ASSERT(2 == ditfft[4]);
-    CU_ASSERT(2 == ditfft[5]);
+    CU_ASSERT_EQUAL(2, ditfft[4]);
+    CU_ASSERT_EQUAL(2, ditfft[5]);
     CU_ASSERT_EQUAL(0, ditfft[6]);
     CU_ASSERT_EQUAL(0, ditfft[7]);
     CU_ASSERT_EQUAL(-2, ditfft[8]);
     CU_ASSERT_EQUAL(-2, ditfft[9]);
     CU_ASSERT_EQUAL(0, ditfft[10]);
     CU_ASSERT_EQUAL(0, ditfft[11]);
-    CU_ASSERT(-2 == ditfft[12]);
-    CU_ASSERT(-2 == ditfft[13]);
+    CU_ASSERT_EQUAL(-2, ditfft[12]);
+    CU_ASSERT_EQUAL(-2, ditfft[13]);
     CU_ASSERT_EQUAL(0, ditfft[14]);
     CU_ASSERT_EQUAL(0, ditfft[15]);
+
+    float input1[] = {1,0,1,0};
+    ditfft = fft(2, input1);
+    CU_ASSERT_EQUAL(2, ditfft[0]);
+    CU_ASSERT_EQUAL(0, ditfft[1]);
+    CU_ASSERT_EQUAL(0, ditfft[2]);
+    CU_ASSERT_EQUAL(0, ditfft[3]);
 
 }
 
