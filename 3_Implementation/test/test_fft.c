@@ -1,3 +1,8 @@
+/** 
+* @file test_fft.c
+*
+*/
+
 #include <CUnit/Basic.h>
 #include <CUnit/CUnit.h>
 
@@ -12,6 +17,7 @@ void test_fft_complex(void);
 void test_fft_even_symmetry(void);
 void test_fft_odd_symmetry(void);
 
+/** Starting point of Test */
 int main() {
 
 	if (CUE_SUCCESS != CU_initialize_registry())
@@ -33,6 +39,7 @@ int main() {
   	return 0;
 }
 
+/** Test whether FFT is correctly computed for arbitrary length of input sequence */
 void test_fft_arbitrary_length(void) {
 
     float input2[] = {0,0,0,1,0,0,1,0,0,0,0,1,0,0,1,0};
@@ -59,6 +66,7 @@ void test_fft_arbitrary_length(void) {
 
 }
 
+/** Test whether FFT is correctly computed for real input sequence */
 void test_fft_real(void) {
 
     float input[] = {1,0,-1,0,1,0,-1,0};
@@ -74,6 +82,7 @@ void test_fft_real(void) {
 
 }
 
+/** Test whether FFT is correctly computed for complex input sequence */
 void test_fft_complex(void) {
 
 	float input[] = {0,1,0,0,0,-1,0,0};
@@ -89,6 +98,7 @@ void test_fft_complex(void) {
 
 }
 
+/** Test whether FFT is correctly computed for even input sequence */
 void test_fft_even_symmetry(void) {
 
     float input[] = {-1,1,0,0,1,1,0,0};
@@ -104,6 +114,7 @@ void test_fft_even_symmetry(void) {
 
 }
 
+/** Test whether FFT is correctly computed for odd input sequence */
 void test_fft_odd_symmetry(void) {
 
     float input[] = {-1,-1,0,0,1,1,0,0};
