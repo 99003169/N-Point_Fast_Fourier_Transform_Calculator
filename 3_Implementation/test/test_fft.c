@@ -47,7 +47,7 @@ void test_fft_arbitrary_length(void) {
     CU_ASSERT_EQUAL(2, (int) ditfft[0]);
     CU_ASSERT_EQUAL(0, (int) ditfft[1]);
     CU_ASSERT_EQUAL(0, (int) ditfft[2]);
-    CU_ASSERT_EQUAL(-1, (int) ditfft[3]);
+    CU_ASSERT_EQUAL(1, (int) ditfft[3]);
     CU_ASSERT_EQUAL(0, (int) ditfft[4]);
     CU_ASSERT_EQUAL(0, (int) ditfft[5]);
     CU_ASSERT_EQUAL(0, (int) ditfft[6]);
