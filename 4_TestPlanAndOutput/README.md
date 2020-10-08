@@ -50,7 +50,7 @@ The objective of the test is to find as many software defects as possible, thus 
 
 ## 4. Test Environment
 
-* The test is carried out using Unity – A unit test framework.
+* The test is carried out using CUnit – A unit test framework.
 
 
 ## 5. Test Cases
