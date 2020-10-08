@@ -5,8 +5,8 @@
 float * fft(int N, float data[]){
 
     //variable declaration
-    int i, j, m, n, mmax, istep, isign = -1;
-    float tempr, tempi, wtemp, wpr, wpi, wr, wi, theta;
+    int i, j, m, n, mmax, isign = -1;
+    float tempr, tempi, wpr, wpi, wr, wi, theta;
 
     //bit-reverse the input
     n = 2*N;
@@ -25,6 +25,8 @@ float * fft(int N, float data[]){
     }
 
     //Calculate FFT
+    int istep;
+    float wtemp;
     mmax = 2;
     while (n > mmax) {
         istep = mmax << 1;
