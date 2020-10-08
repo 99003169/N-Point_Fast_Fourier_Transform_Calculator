@@ -1,8 +1,8 @@
 # N-Point Fast Fourier Transform Calculator
 
-| Build | Unit Test | Cppcheck | Valgrind |
-|-------|-----------|----------|----------|
-| ![C/C++ CI](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/workflows/C/C++%20CI/badge.svg?branch=master) | ![Unit testing](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/workflows/Unit%20testing/badge.svg) | ![cppcheck-action](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/workflows/cppcheck-action/badge.svg) | ![Valgrind](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/workflows/Valgrind/badge.svg) |
+| Build | Unit Test | Cppcheck | Valgrind | Codacy |
+|-------|-----------|----------|----------|--------|
+| ![C/C++ CI](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/workflows/C/C++%20CI/badge.svg?branch=master) | ![Unit testing](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/workflows/Unit%20testing/badge.svg) | ![cppcheck-action](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/workflows/cppcheck-action/badge.svg) | ![Valgrind](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/workflows/Valgrind/badge.svg) | ![Codacy Badge](https://app.codacy.com/project/badge/Grade/e558ae86aab346f5bc08c0e7782eaf69)](https://www.codacy.com/gh/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=stepin105296/N-Point_Fast_Fourier_Transform_Calculator&amp;utm_campaign=Badge_Grade) |
 
 ## Description
 
