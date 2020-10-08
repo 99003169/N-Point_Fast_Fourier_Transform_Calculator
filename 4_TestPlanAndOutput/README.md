@@ -73,5 +73,5 @@ The objective of the test is to find as many software defects as possible, thus 
 
 ## 6. Output
 
-![Output](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/blob/master/6_ImagesAndVideos/FFT.png)
+![Output](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/blob/master/4_TestPlanAndOutput/Test_case_run_summary.png)
 
