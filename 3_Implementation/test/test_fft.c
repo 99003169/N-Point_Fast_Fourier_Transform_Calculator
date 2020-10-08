@@ -4,7 +4,7 @@
 #include <fft.h>
 #define PROJECT_NAME    "fft"
 
-//float * ditfft;
+float * ditfft;
 
 void test_fft_arbitrary_length(void);
 void test_fft_real(void);
