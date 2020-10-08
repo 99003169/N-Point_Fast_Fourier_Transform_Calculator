@@ -4,7 +4,6 @@
 #include <fft.h>
 #define PROJECT_NAME    "fft"
 
-int length;
 float * ditfft;
 
 void test_fft_arbitrary_length(void);
@@ -36,17 +35,15 @@ int main() {
 
 void test_fft_arbitrary_length(void) {
 
-    length = 2;
     float input1[] = {1,0,1,0};
-    ditfft = fft(length, input1);
+    ditfft = fft(2, input1);
     CU_ASSERT_EQUAL(2, ditfft[0]);
     CU_ASSERT_EQUAL(0, ditfft[1]);
     CU_ASSERT_EQUAL(0, ditfft[2]);
     CU_ASSERT_EQUAL(0, ditfft[3]);
 
-    length = 8;
     float input2[] = {0.5,0,0.5,0,0.5,0,0.5,0,0,0,0,0,0,0,0,0};
-    ditfft = fft(length, input2);
+    ditfft = fft(8, input2);
     CU_ASSERT_EQUAL(2, ditfft[0]);
     CU_ASSERT_EQUAL(0, ditfft[1]);
     CU_ASSERT_EQUAL(0.5, ditfft[2]);
@@ -68,9 +65,8 @@ void test_fft_arbitrary_length(void) {
 
 void test_fft_real(void) {
 
-    length = 4;
     float input[] = {1,0,-1,0,1,0,-1,0};
-    ditfft = fft(length, input);
+    ditfft = fft(4, input);
     CU_ASSERT_EQUAL(0, ditfft[0]);
     CU_ASSERT_EQUAL(0, ditfft[1]);
     CU_ASSERT_EQUAL(0, ditfft[2]);
@@ -84,9 +80,8 @@ void test_fft_real(void) {
 
 void test_fft_complex(void) {
 
-	length = 4;
 	float input[] = {0,1,0,0,0,-1,0,0};
-    ditfft = fft(length, input);
+    ditfft = fft(4, input);
     CU_ASSERT_EQUAL(0, ditfft[0]);
     CU_ASSERT_EQUAL(0, ditfft[1]);
     CU_ASSERT_EQUAL(0, ditfft[2]);
@@ -100,9 +95,8 @@ void test_fft_complex(void) {
 
 void test_fft_even_symmetry(void) {
 
-  	length = 4;
     float input[] = {-1,1,0,0,1,1,0,0};
-    ditfft = fft(length, input);
+    ditfft = fft(4, input);
     CU_ASSERT_EQUAL(0, ditfft[0]);
     CU_ASSERT_EQUAL(2, ditfft[1]);
     CU_ASSERT_EQUAL(-2, ditfft[2]);
@@ -115,9 +109,9 @@ void test_fft_even_symmetry(void) {
 }
 
 void test_fft_odd_symmetry(void) {
-  	length = 4;
+
     float input[] = {-1,-1,0,0,1,1,0,0};
-    ditfft = fft(length, input);
+    ditfft = fft(4, input);
     CU_ASSERT_EQUAL(0, ditfft[0]);
     CU_ASSERT_EQUAL(0, ditfft[1]);
     CU_ASSERT_EQUAL(-2, ditfft[2]);
