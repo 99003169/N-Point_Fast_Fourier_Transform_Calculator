@@ -58,7 +58,7 @@ The objective of the test is to find as many software defects as possible, thus 
 | Test Case ID 	  | Test Scenario	                                                        | Test Steps	                                    | Test Data
 |-----------------|-----------------------------------------------------------------------|-------------------------------------------------|------------------------------------
 | TC01	          | Test whether the FFT is computed for arbitrary length of inputs.	    | 1.Enter the no. of samples.                     | 1. 8
-|                 |                                                                       |  2. Enter the samples.                          | 2. 0, j, 0, 1, 0, j, 0, 1
+|                 |                                                                       | 2. Enter the samples.                           | 2. 0, j, 0, 1, 0, j, 0, 1
 |                 |                                                                       | 1. Enter a different no. of samples.	          | 1. 2
 |                 |                                                                       | 2. Enter the samples again.                     | 2. 1, 1
 | TC02	          | Test whether the FFT is computed for real numbers.	                  | 1. Enter the no. of samples.                    | 1. 4
@@ -69,4 +69,9 @@ The objective of the test is to find as many software defects as possible, thus 
 |                 |                                                                       | 2. Enter even data samples.                     | 2. -1+1j, 0, 1+j, 0
 | TC05	          | Test whether the FFT is computed for data samples with odd symmetry.	| 1. Enter the no. of samples.                    | 1. 4
 |                 |                                                                       | 2. Enter odd data samples.                      | 2. -1-1j, 0, 1+j, 0
+
+
+## 6. Output
+
+![Output](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/blob/master/6_ImagesAndVideos/FFT.png)
 
