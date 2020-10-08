@@ -58,7 +58,7 @@ The objective of the test is to find as many software defects as possible, thus 
 | Test Case ID 	  | Test Scenario	                                                        | Test Steps	                                    | Test Data
 |-----------------|-----------------------------------------------------------------------|-------------------------------------------------|------------------------------------
 | TC01	          | Test whether the FFT is computed for arbitrary length of inputs.	    | 1.Enter the no. of samples.                     | 1. 8
-|                 |                                                                       |  2. Enter the samples.                          | 2. 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0
+|                 |                                                                       |  2. Enter the samples.                          | 2. 0, j, 0, 1, 0, j, 0, 1
 |                 |                                                                       | 1. Enter a different no. of samples.	          | 1. 2
 |                 |                                                                       | 2. Enter the samples again.                     | 2. 1, 1
 | TC02	          | Test whether the FFT is computed for real numbers.	                  | 1. Enter the no. of samples.                    | 1. 4
