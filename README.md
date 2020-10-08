@@ -6,6 +6,8 @@
 | ![C/C++ CI](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/workflows/C/C++%20CI/badge.svg?branch=master) | ![Unit testing](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/workflows/Unit%20testing/badge.svg) | ![cppcheck-action](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/workflows/cppcheck-action/badge.svg) | ![Valgrind](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/workflows/Valgrind/badge.svg) |
 
 
+## Description
+
 “Fast Fourier Transform (FFT) is the most important numerical algorithm of our lifetime”, says Gilbert Strang. 
 
 It is a computer algorithm which changes the time domain signal into the frequency domain by quickly performing a discrete Fourier transform (DFT) on the signal. There are myriad uses of FFT namely in engineering, music, science, and mathematics.
