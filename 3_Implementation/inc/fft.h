@@ -1,6 +1,5 @@
 /**
 * @file fft.h
-*
 */
 #ifndef FFT_H_INCLUDED
 #define FFT_H_INCLUDED
@@ -11,9 +10,9 @@
 
 /**
 * Calculates the FFT
-* @param[in] Total number of samples in the data sequence and the input data sequence
-* @return FFT of the input data sequence
-*
+* @param[in] N Total number of samples in the input data sequence
+* @param[in] data[] An array containing the input data sequence
+* @return data: A pointer pointing to an array containing the computed FFT
 */
 float * fft(int, float []);
 

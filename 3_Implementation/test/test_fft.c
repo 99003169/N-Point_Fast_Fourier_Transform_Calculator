@@ -1,6 +1,5 @@
-/** 
+/**
 * @file test_fft.c
-*
 */
 
 #include <CUnit/Basic.h>

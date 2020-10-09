@@ -1,12 +1,11 @@
 /**
 * @file main.c
-*
 */
 
 #include <fft.h>
 
 /**
-*Main entry of the program
+*Starting point of execution
 */
 
 int main(){
