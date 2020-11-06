@@ -1,5 +1,4 @@
 ## Description
-
 “Fast Fourier Transform (FFT) is the most important numerical algorithm of our lifetime”, says Gilbert Strang. 
 
 It is a computer algorithm which changes the time domain signal into the frequency domain by quickly performing a discrete Fourier transform (DFT) on the signal. There are myriad uses of FFT namely in engineering, music, science, and mathematics.
