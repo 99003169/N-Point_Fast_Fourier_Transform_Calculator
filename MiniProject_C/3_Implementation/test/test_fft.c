@@ -4,7 +4,6 @@
 
 #include <CUnit/Basic.h>
 #include <CUnit/CUnit.h>
-
 #include <fft.h>
 #define PROJECT_NAME    "fft"
 
@@ -62,7 +61,6 @@ void test_fft_arbitrary_length(void) {
     CU_ASSERT_EQUAL(0, ditfft[1]);
     CU_ASSERT_EQUAL(0, ditfft[2]);
     CU_ASSERT_EQUAL(0, ditfft[3]);
-
 }
 
 /** Test whether FFT is correctly computed for real input sequence */
@@ -78,7 +76,6 @@ void test_fft_real(void) {
     CU_ASSERT_EQUAL(0, ditfft[5]);
     CU_ASSERT_EQUAL(0, ditfft[6]);
     CU_ASSERT_EQUAL(0, ditfft[7]);
-
 }
 
 /** Test whether FFT is correctly computed for complex input sequence */
@@ -94,7 +91,6 @@ void test_fft_complex(void) {
     CU_ASSERT_EQUAL(0, ditfft[5]);
     CU_ASSERT_EQUAL(0, ditfft[6]);
     CU_ASSERT_EQUAL(2, ditfft[7]);
-
 }
 
 /** Test whether FFT is correctly computed for even input sequence */
@@ -110,7 +106,6 @@ void test_fft_even_symmetry(void) {
     CU_ASSERT_EQUAL(2, ditfft[5]);
     CU_ASSERT_EQUAL(-2, ditfft[6]);
     CU_ASSERT_EQUAL(0, ditfft[7]);
-
 }
 
 /** Test whether FFT is correctly computed for odd input sequence */
@@ -126,5 +121,4 @@ void test_fft_odd_symmetry(void) {
     CU_ASSERT_EQUAL(0, ditfft[5]);
     CU_ASSERT_EQUAL(-2, ditfft[6]);
     CU_ASSERT_EQUAL(-2, ditfft[7]);
-
 }
