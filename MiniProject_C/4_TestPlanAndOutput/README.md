@@ -62,4 +62,4 @@ The objective of the test is to find as many software defects as possible, thus 
 
 ## 6. Output - Test Case Run Summary
 
-![Output](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/blob/master/4_TestPlanAndOutput/Test%20Case%20Run%20Summary.png)
+![Output](https://github.com/stepin105296/N-Point_Fast_Fourier_Transform_Calculator/blob/master/MiniProject_C/4_TestPlanAndOutput/Test%20Case%20Run%20Summary.png)
